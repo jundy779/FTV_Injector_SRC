@@ -1,0 +1,110 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/build.gradle",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": -1,
+          "line": 0
+        },
+        "start": {
+          "column": 0,
+          "index": -1,
+          "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/src/main/java/com/slipkprojects/ultrasshservice/util/securepreferences/model/vagol.java",
+      "selection": {
+        "end": {
+          "column": 41,
+          "index": -1,
+          "line": 24
+        },
+        "start": {
+          "column": 41,
+          "index": -1,
+          "line": 24
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/src/main/java/com/slipkprojects/sockshttp/util/ConfigUtil.java",
+      "selection": {
+        "end": {
+          "column": 56,
+          "index": -1,
+          "line": 24
+        },
+        "start": {
+          "column": 56,
+          "index": -1,
+          "line": 24
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/src/main/res/menu/bottom_menu.xml",
+      "selection": {
+        "end": {
+          "column": 7,
+          "index": -1,
+          "line": 10
+        },
+        "start": {
+          "column": 7,
+          "index": -1,
+          "line": 10
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/src/main/java/com/slipkprojects/sockshttp/MainActivity.java",
+      "selection": {
+        "end": {
+          "column": 34,
+          "index": -1,
+          "line": 473
+        },
+        "start": {
+          "column": 34,
+          "index": -1,
+          "line": 473
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/src/main/res/menu/navigation_menu.xml",
+      "selection": {
+        "end": {
+          "column": 41,
+          "index": -1,
+          "line": 35
+        },
+        "start": {
+          "column": 13,
+          "index": -1,
+          "line": 32
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/src/main/res/menu/main_menu.xml",
+      "selection": {
+        "end": {
+          "column": 120,
+          "index": -1,
+          "line": 4
+        },
+        "start": {
+          "column": 120,
+          "index": -1,
+          "line": 4
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/Download/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/𝙎𝙊𝙁𝙄𝘼-𝙎𝙊𝘾𝙆𝙎 𝙋𝙃/app/src/main/java/com/slipkprojects/sockshttp/MainActivity.java"
+}

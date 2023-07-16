@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:icon="@drawable/darkmode" android:id="@+id/CopyLogs" android:title="THEME" app:showAsAction="always" />
+	<group android:id="@+id/grupo1">
+		<item android:icon="@drawable/bell" android:id="@+id/pogso" android:title="SERVER STATUS" app:showAsAction="always" />
+		<item android:icon="@drawable/ic_settings" android:id="@+id/miSettings" android:title="OFFLINE UPDATES" />
+		<item android:icon="@drawable/ic_settings" android:id="@+id/miClearData" android:title="CLEAR DATA" />
+		<item android:icon="@drawable/ic_settings" android:id="@+id/miSettings1" android:title="EXIT" />
+	</group>
+</menu>

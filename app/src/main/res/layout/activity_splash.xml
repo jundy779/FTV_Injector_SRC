@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:background="#FF3F51B5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<ImageView
+android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/icon" android:layout_centerInParent="true" />
+	<LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="150.0dip">
+		<TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FTV Injector" />
+	</LinearLayout>
+	<LinearLayout android:gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+		<TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0sp" android:text="Loading..." />
+	</LinearLayout>
+</RelativeLayout>

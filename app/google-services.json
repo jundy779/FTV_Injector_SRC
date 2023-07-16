@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "847510731466",
+    "project_id": "guimarasvpn.net",
+    "storage_bucket": "guimarasvpn.net.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847510731466:android:07806224c2dc3045631233",
+        "android_client_info": {
+          "package_name": "com.ftv.injector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847510731466-eio247oj0jfostsfof8jo96csmjkrtkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9iXo1MvVw79nHFCw4Au9z2gghri4uWI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847510731466-eio247oj0jfostsfof8jo96csmjkrtkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

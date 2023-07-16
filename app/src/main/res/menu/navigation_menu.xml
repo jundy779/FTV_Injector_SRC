@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group android:id="@+id/grupo0"
+    android:checkableBehavior="single">
+    	<group android:id="@+id/grupo7">
+        
+        <item
+       	android:id="@+id/pogs"
+			android:icon="@drawable/fs"
+        	android:title="Release Notes"/>
+            
+        		<item
+       	android:id="@+id/configUpdate"
+			android:icon="@drawable/ic_file_download"
+        	android:title="Update Resources"/>
+            
+             </group>
+             
+		
+	</group>
+    
+    	<group android:id="@+id/grupo76">
+    	  <item
+  android:id="@+id/hostshare"
+  android:icon="@drawable/icon_generator1"
+  android:title="Custom Payload"/>
+        
+            	<item
+       	android:id="@+id/pogse"
+			android:icon="@drawable/ic_shield_edit1"
+        	android:title="Custom Server"/>
+            	<item
+       	android:id="@+id/pogse1"
+			android:icon="@drawable/ic_wifi_tethering_black_24dp"
+        	android:title="Hotspot Tether"/>
+            
+            
+            </group>
+            <group android:id="@+id/grupo726">
+           <item android:id="@+id/item7"
+			android:icon="@drawable/messenger"
+			android:title="Telegram Channel"/>
+        
+		
+		<item android:id="@+id/item5"
+			android:icon="@drawable/ic_fb"
+			android:title="Facebook Group"/>
+			    </group>
+    	<group android:id="@+id/grupo76">
+  
+            
+       <item android:id="@+id/miSettings"
+        	android:icon="@drawable/ic_settings"
+        	android:title="@string/settings"/>
+  
+      
+    </group>
+	
+</menu>
