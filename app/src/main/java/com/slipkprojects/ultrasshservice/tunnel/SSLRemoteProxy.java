@@ -12,6 +12,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.nio.channels.SocketChannel;
+
+import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.HandshakeCompletedListener;
 import javax.net.ssl.HandshakeCompletedEvent;
@@ -32,7 +34,12 @@ public class SSLRemoteProxy implements ProxyData {
         }
 
 		public void handshakeCompleted(HandshakeCompletedEvent handshakeCompletedEvent) {
-			// addLog(new StringBuffer().append("<b>Established ").append(handshakeCompletedEvent.getSession().getProtocol()).append(" connection with ").append(val$host).append(":").append(this.val$port).append(" using ").append(handshakeCompletedEvent.getCipherSuite()).append("</b>").toString());
+            try {
+                SkStatus.logInfo("<strong><font color='#FF3F51B5'>" + "PeerPrincipal " + "</strong>" + handshakeCompletedEvent.getPeerPrincipal().toString());
+            } catch (SSLPeerUnverifiedException e) {
+                throw new RuntimeException(e);
+            }
+            // addLog(new StringBuffer().append("<b>Established ").append(handshakeCompletedEvent.getSession().getProtocol()).append(" connection with ").append(val$host).append(":").append(this.val$port).append(" using ").append(handshakeCompletedEvent.getCipherSuite()).append("</b>").toString());
 			//addLog(new StringBuffer().append("<b>Established ").append(handshakeCompletedEvent.getSession().getProtocol()).append(" connection ").append("using ").append(handshakeCompletedEvent.getCipherSuite()).append("</b>").toString());
 		    //addLog(new StringBuffer().append("Supported cipher suites: ").append(Arrays.toString(this.val$sslSocket.getSupportedCipherSuites())).toString());
             //addLog(new StringBuffer().append("Enabled cipher suites: ").append(Arrays.toString(this.val$sslSocket.getEnabledCipherSuites())).toString());
@@ -201,10 +208,13 @@ public class SSLRemoteProxy implements ProxyData {
 			} catch (Throwable e) {
 				// ignore any error, we just can't set the hostname...
 			}
-
+            socket.setEnabledProtocols(new String[] {"TLSv1", "TLSv1.2", "TLSv1.3"});
+            socket.setEnabledProtocols(socket.getEnabledProtocols());
 			socket.setEnabledProtocols(socket.getSupportedProtocols());
             socket.addHandshakeCompletedListener(new HandshakeTunnelCompletedListener(host, port, socket));
             SkStatus.logInfo("Starting SSL Handshake...");
+            socket.setSendBufferSize(mSocket.getSendBufferSize());
+            socket.setReceiveBufferSize(mSocket.getReceiveBufferSize());
 			socket.startHandshake();
 			return socket;
         } catch (Exception e) {

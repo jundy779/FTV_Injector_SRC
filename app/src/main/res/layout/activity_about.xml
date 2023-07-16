@@ -25,7 +25,7 @@
 				</LinearLayout>
 			</LinearLayout>
 		</androidx.cardview.widget.CardView>
-		<androidx.cardview.widget.CardView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="0.0dip" app:cardElevation="2.0dip" app:cardUseCompatPadding="true">
+		<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="0.0dip" app:cardElevation="2.0dip" app:cardUseCompatPadding="true">
 			<LinearLayout android:orientation="vertical" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
 				<TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:textSize="11.0dip" android:textStyle="bold" android:textColor="@color/colorOpposite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginBottom="10.0dip" android:text="Modifier/Developer :" />
 				<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?selectableItemBackground" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:minHeight="50.0dip">

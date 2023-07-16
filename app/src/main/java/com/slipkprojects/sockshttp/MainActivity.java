@@ -210,7 +210,7 @@ View.OnLongClickListener,View.OnClickListener {
     private InterstitialAd interstitialAd;
     private boolean mShown, mShown2;
     private boolean running;
-	private static final String[] tabTitle = {"HOME","LOGS", "ABOUT"};
+	private static final String[] tabTitle = {"HOME","LOGS","ABOUT"};
     private ViewPager vp;
     private String picture = "";
     private ImageView imageview1;

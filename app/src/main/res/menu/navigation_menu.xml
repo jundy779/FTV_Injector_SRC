@@ -34,9 +34,13 @@
        	android:id="@+id/pogse1"
 			android:icon="@drawable/ic_wifi_tethering_black_24dp"
         	android:title="Hotspot Tether"/>
-            
-            
-            </group>
+			<item
+				android:id="@+id/speedmdevz"
+				android:icon="@drawable/ic_speedtest"
+				android:title="Speed Test" />
+
+
+		</group>
             <group android:id="@+id/grupo726">
            <item android:id="@+id/item7"
 			android:icon="@drawable/messenger"

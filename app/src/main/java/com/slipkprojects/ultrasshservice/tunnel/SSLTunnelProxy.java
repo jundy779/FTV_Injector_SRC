@@ -5,6 +5,8 @@ import java.net.Socket;
 import java.io.IOException;
 import java.nio.channels.SocketChannel;
 import java.net.InetSocketAddress;
+
+import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.net.ssl.SSLContext;
@@ -30,7 +32,12 @@ public class SSLTunnelProxy implements ProxyData
         }
 
         public void handshakeCompleted(HandshakeCompletedEvent handshakeCompletedEvent) {
-			 SkStatus.logInfo(new StringBuffer().append("<b>Established ").append(handshakeCompletedEvent.getSession().getProtocol()).append(" connection with ").append("********").append(":").append(this.val$port).append(" using ").append(handshakeCompletedEvent.getCipherSuite()).append("</b>").toString());
+			try {
+				SkStatus.logInfo("<strong><font color='#FF3F51B5'>" + "PeerPrincipal " + "</strong>" + handshakeCompletedEvent.getPeerPrincipal().toString());
+			} catch (SSLPeerUnverifiedException e) {
+				throw new RuntimeException(e);
+			}
+			SkStatus.logInfo(new StringBuffer().append("<b>Established ").append(handshakeCompletedEvent.getSession().getProtocol()).append(" connection with ").append("********").append(":").append(this.val$port).append(" using ").append(handshakeCompletedEvent.getCipherSuite()).append("</b>").toString());
 			//addLog(new StringBuffer().append("<b>Established ").append(handshakeCompletedEvent.getSession().getProtocol()).append(" connection ").append("using ").append(handshakeCompletedEvent.getCipherSuite()).append("</b>").toString());
 		    //addLog(new StringBuffer().append("Supported cipher suites: ").append(Arrays.toString(this.val$sslSocket.getSupportedCipherSuites())).toString());
             //addLog(new StringBuffer().append("Enabled cipher suites: ").append(Arrays.toString(this.val$sslSocket.getEnabledCipherSuites())).toString());
@@ -99,6 +106,8 @@ public class SSLTunnelProxy implements ProxyData
 			socket3.setEnabledProtocols(socket3.getSupportedProtocols());
             socket3.addHandshakeCompletedListener(new HandshakeTunnelCompletedListener(host, port, socket3));
             SkStatus.logInfo("Starting SSL Handshake...");
+			socket3.setSendBufferSize(mSocket.getSendBufferSize());
+			socket3.setReceiveBufferSize(mSocket.getReceiveBufferSize());
 			socket3.startHandshake();
             return socket3;
         } catch (Exception e) {

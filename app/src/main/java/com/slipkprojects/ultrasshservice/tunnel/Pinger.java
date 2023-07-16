@@ -89,7 +89,7 @@ public class Pinger extends Thread {
                         SkStatus.logWarning("Ping " + readLine + " " + "<b><font color=\"red\">" + pingTime + "</font>" + " ms" + "</b>");
                     }
                     else {
-                        //SkStatus.logInfo("Pinger: No Data");
+                        SkStatus.logInfo("Pinger: No Data");
                     }
                     bufferedReader.close();
                     inputStream.close();

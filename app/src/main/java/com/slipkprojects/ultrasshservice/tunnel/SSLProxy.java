@@ -23,6 +23,7 @@ import javax.net.ssl.HandshakeCompletedEvent;
 import javax.net.ssl.HandshakeCompletedListener;
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
@@ -58,6 +59,11 @@ public class SSLProxy implements ProxyData
 
 
         public void handshakeCompleted(HandshakeCompletedEvent handshakeCompletedEvent) {
+			try {
+				SkStatus.logInfo("<strong><font color='#FF3F51B5'>" + "PeerPrincipal " + "</strong>" + handshakeCompletedEvent.getPeerPrincipal().toString());
+			} catch (SSLPeerUnverifiedException e) {
+				throw new RuntimeException(e);
+			}
 			/*	SkStatus.logInfo("SSL: Using cipher " + handshakeCompletedEvent.getSession().getCipherSuite());
 			 SkStatus.logInfo("SSL: Using protocol " + handshakeCompletedEvent.getSession().getProtocol());*/
 			SkStatus.logInfo(new StringBuffer().append("<b>Established ").append(handshakeCompletedEvent.getSession().getProtocol()).append(" connection ").append(" using ").append(handshakeCompletedEvent.getCipherSuite()).append("</b>").toString());
@@ -222,7 +228,7 @@ public class SSLProxy implements ProxyData
 			}
 		};
         try {
-            SSLContext sSLContext = SSLContext.getInstance("SSL");
+            SSLContext sSLContext = SSLContext.getInstance("SSL","Conscrypt");
             KeyManager[] keyManagerArr = null;
             sSLContext.init(keyManagerArr, trustAllCerts, new SecureRandom());
             SSLSocket socket3 = (SSLSocket) sSLContext.getSocketFactory().createSocket(socket, host, port, true);
@@ -239,6 +245,8 @@ public class SSLProxy implements ProxyData
 			socket3.setEnabledProtocols(socket3.getSupportedProtocols());
             socket3.addHandshakeCompletedListener(new HandshakeTunnelCompletedListener(host, port, socket3));
             SkStatus.logInfo("Starting SSL Handshake...");
+			socket3.setSendBufferSize(mSocket.getSendBufferSize());
+			socket3.setReceiveBufferSize(mSocket.getReceiveBufferSize());
 			socket3.startHandshake();
             return socket3;
         } catch (Exception e) {
