@@ -310,12 +310,12 @@ public class TunnelManagerThread
 					}
 
 					if (lastPingLatency <120) {
-						SkStatus.logInfo(String.format("Ping <font color=\"green\">%dms</font>", lastPingLatency));
+						SkStatus.logInfo(String.format("Ping Latency<font color=\"green\">%dms</font>", lastPingLatency));
 						break;
 					}
 
 					else if (lastPingLatency > 120){
-						SkStatus.logInfo(String.format("Ping <font color=\"red\">%dms</font>", lastPingLatency));
+						SkStatus.logInfo(String.format("Ping Latency<font color=\"red\">%dms</font>", lastPingLatency));
 						break;
 					}
 				}
@@ -323,7 +323,7 @@ public class TunnelManagerThread
 		}).start();
 
 		String PING = mConfig.setPinger();
-		SkStatus.logInfo("Ping Server : " + mConfig.setPinger());
+		SkStatus.logInfo("Ping Server : " + "<font color=\"#159B14\">" + mConfig.setPinger() + "</font>");
 		if (mConfig.setAutoPing()){
 
 			try {
