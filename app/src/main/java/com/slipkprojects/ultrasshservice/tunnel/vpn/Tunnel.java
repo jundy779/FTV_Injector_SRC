@@ -249,13 +249,13 @@ public class Tunnel
 			while (it2.hasNext()) {
 				NetworkSpace.IpAddress ip = it2.next();
 
-				//routeExcludeMessage.append(String.format("%s/%d", ip.getIPv4Address(), ip.networkMask));
-				//routeExcludeMessage.append(", ");
+				routeExcludeMessage.append(String.format("%s/%d", ip.getIPv4Address(), ip.networkMask));
+				routeExcludeMessage.append(", ");
 			}
-			//routeExcludeMessage.deleteCharAt(routeExcludeMessage.lastIndexOf(", "));
+			routeExcludeMessage.deleteCharAt(routeExcludeMessage.lastIndexOf(", "));
 			
 			mHostService.onDiagnosticMessage(routeMessage.toString());
-			//mHostService.onDiagnosticMessage(routeExcludeMessage.toString());
+			mHostService.onDiagnosticMessage(routeExcludeMessage.toString());
 			
 			// loop routes
 			NetworkSpace.IpAddress multicastRange = new NetworkSpace.IpAddress(new CIDRIP("224.0.0.0", 3), true);
@@ -267,7 +267,7 @@ public class Tunnel
 					else
 						builder.addRoute(route.getIPv4Address(), route.networkMask);
 				} catch (IllegalArgumentException ia) {
-					//mHostService.onDiagnosticMessage("Route rejected: " + route + " " + ia.getLocalizedMessage());
+					mHostService.onDiagnosticMessage("Route rejected: " + route + " " + ia.getLocalizedMessage());
 				}
 			}
 			

@@ -243,7 +243,7 @@ public class Settings implements SettingsConstants
 
 		editor.putBoolean(DNSFORWARD_KEY, true);
         editor.putBoolean(VIBRATE, false);
-				editor.putBoolean(SSH_COMPRESSION, true);
+		editor.putBoolean(SSH_COMPRESSION, true);
 		editor.putString(DNSRESOLVER_KEY, "8.8.8.8");
 		editor.putString(DNSRESOLVER_KEY2, "8.8.4.4");
 		editor.putBoolean(UDPFORWARD_KEY, false);
