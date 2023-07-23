@@ -25,7 +25,7 @@ public class SpeedTestActivity extends Activity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar1);
         web.setWebViewClient(new myWebClient());
         web.getSettings().setJavaScriptEnabled(true);
-        web.loadUrl("https://azzphuc.speedtestcustom.com");
+        web.loadUrl("https://fusiontempest.speedtestcustom.com");
         
     }
 

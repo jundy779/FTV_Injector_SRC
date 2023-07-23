@@ -35,7 +35,7 @@
 			android:icon="@drawable/ic_wifi_tethering_black_24dp"
         	android:title="Hotspot Tether"/>
 			<item
-				android:id="@+id/speedmdevz"
+				android:id="@+id/speedtest"
 				android:icon="@drawable/ic_speedtest"
 				android:title="Speed Test" />
 

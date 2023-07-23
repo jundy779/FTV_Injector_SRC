@@ -1544,9 +1544,14 @@ public class DrawerPanelMain
 				intent4.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				startActivity(Intent.createChooser(intent4, getText(R.string.open_with)));
 				return true;
+				case R.id.speedtest:
+					if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+						drawerLayout.closeDrawers();
+					}
+					Intent speedtest = new Intent(mActivity, SpeedTestActivity.class);
+					mActivity.startActivity(speedtest);
+					break;
 
-                
-                
                 case R.id.pogse:
               if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 drawerLayout.closeDrawers();

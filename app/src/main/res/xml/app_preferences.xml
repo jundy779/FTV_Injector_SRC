@@ -77,7 +77,8 @@
 		android:title="Ping Server"
 		android:singleLine="true"
 		android:summary="Set ping server"
-		android:defaultValue="clients3.google.com"/>
+		android:defaultValue="clients3.google.com"
+		android:dialogLayout="@layout/pref_dialog_edittext_fix"/>
             
 		<com.slipkprojects.sockshttp.view.SummaryEditTextPreference
             android:key="pingerSSH"

@@ -162,7 +162,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="12.0dip"
                                 android:textColor="@color/colorOpposite"
-                                android:text="Angelo Maldora"/>
+                                android:text="Tempest VPN Official"/>
                             <TextView
                                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                                 android:autoLink="web"
@@ -170,7 +170,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="11.0dip"
                                 android:textColor="@color/colorOpposite"
-                                android:text="Vpn Owner"/>
+                                android:text="VPN Owner"/>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout

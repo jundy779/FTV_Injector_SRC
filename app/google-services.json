@@ -1,38 +1,39 @@
 {
   "project_info": {
-    "project_number": "847510731466",
-    "project_id": "guimarasvpn.net",
-    "storage_bucket": "guimarasvpn.net.appspot.com"
+    "project_number": "152409395306",
+    "project_id": "ftv-injector",
+    "storage_bucket": "ftv-injector.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:847510731466:android:07806224c2dc3045631233",
+        "mobilesdk_app_id": "1:152409395306:android:2d8b92e2357e4515007a13",
         "android_client_info": {
           "package_name": "com.ftv.injector"
         }
       },
       "oauth_client": [
         {
-          "client_id": "847510731466-eio247oj0jfostsfof8jo96csmjkrtkg.apps.googleusercontent.com",
+          "client_id": "152409395306-q7a3jcjc7jr699kubbh77edqd9c8cman.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC9iXo1MvVw79nHFCw4Au9z2gghri4uWI8"
+          "current_key": "AIzaSyBh6pDo7yKPGeSHvvPxOvcVlTWtHMNFeqA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "847510731466-eio247oj0jfostsfof8jo96csmjkrtkg.apps.googleusercontent.com",
+              "client_id": "152409395306-q7a3jcjc7jr699kubbh77edqd9c8cman.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-8377387690161447~4099778874"
     }
   ],
   "configuration_version": "1"
